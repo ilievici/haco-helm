@@ -1,0 +1,30 @@
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+elastic-stack:
+  elasticsearch:
+    clusterName: address-search
+    masterTerminationFix: true
+    replicas: 2
+    minimumMasterNodes: 1
+
+    resources:
+      requests:
+        cpu: "100m"
+        memory: "512Mi"
+      limits:
+        cpu: "2000m"
+        memory: "512M"
+
+  kibana:
+    clusterName: address-search
+    replicas: 1
+    minimumMasterNodes: 1
+
+    resources:
+      requests:
+        cpu: "100m"
+        memory: "512Mi"
+      limits:
+        cpu: "200m"
+        memory: "512M"
